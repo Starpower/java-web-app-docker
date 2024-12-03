@@ -1,0 +1,16 @@
+version: "3"
+services:
+  java-web-application:
+    image: dheeravathshiva/java-web-application:1
+    ports:
+      - "7070:8080"
+    volumes:
+      - java-web-application-vol
+    networks:
+      - java-web-application-bridge
+volumes:
+  java-web-application-vol:
+    driver: local
+networks:
+  java-web-application-bridge:
+    driver: bridge
